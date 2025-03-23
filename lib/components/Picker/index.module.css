@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-basis: 0;
+  gap: 0.5rem;
+}
+.label {
+  font-size: 0.9rem;
+  text-align: center;
+}
+.input {
+  width: 60px;
+  align-self: center;
+  outline: none;
+  border: grey 1px solid;
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+}
+.scrollerWrapper {
+  position: relative;
+}
+.selectedUnit {
+  position: absolute;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  height: 40px;
+  width: 100%;
+  top: 80px;
+  left: 0;
+}
+.scroller {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  scrollbar-width: none;
+  height: 200px;
+  scroll-snap-type: y mandatory;
+  position: relative;
+}
+@media (hover: none) {
+  .scroller {
+    overflow: auto;
+  }
+}
+.unit {
+  font-size: 1.4rem;
+  min-height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: center;
+}

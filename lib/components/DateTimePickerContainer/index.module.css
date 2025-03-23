@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.tabContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow: auto;
+}
+.tabs {
+  display: flex;
+}
+.tab {
+  flex-grow: 1;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  font-size: 0.9rem;
+}
+.tab:hover:not([data-selected]) {
+  background-color: rgb(232, 232, 232);
+  transition: 0.2s;
+  cursor: pointer;
+}
+.tab[data-selected] {
+  border-bottom: 2px black solid;
+}
+.datePreview {
+  border: 1.5px grey solid;
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.3rem;
+  text-align: center;
+}
